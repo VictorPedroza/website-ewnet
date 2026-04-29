@@ -95,6 +95,22 @@ img { display: block; max-width: 100%; }
   white-space: nowrap;
   transition: background 0.2s;
 }
+
+.btn-green {
+  display: inline-block;
+  background: rgb(79, 254, 26);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
 .btn-white:hover { background: var(--red-light); }
 
 /* Labels de seção */
@@ -835,6 +851,24 @@ footer ul a:hover { color: var(--white); }
 .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
 .footer-bottom a { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
 .footer-bottom a:hover { color: rgba(255,255,255,0.7); }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 100%;
+  overflow: hidden;
+}
 
 /* ── 16. ANIMAÇÕES ── */
 @keyframes fadeUp {
