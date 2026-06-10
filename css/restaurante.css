@@ -1,0 +1,597 @@
+/* =============================================================
+   restaurante.css — Estilos exclusivos da página de Restaurantes
+   ============================================================= */
+
+/* ── SHELL ── */
+.restaurant-shell {
+  background: linear-gradient(180deg, #fffaf7 0%, #ffffff 100%);
+  color: #2d2d2d;
+}
+
+/* ── HERO ── */
+.restaurant-hero {
+  padding: 72px 5% 60px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(142, 11, 17, 0.97) 0%,
+      rgba(200, 18, 26, 0.93) 60%,
+      rgba(180, 50, 10, 0.92) 100%
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80")
+      center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.restaurant-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='38' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/g%3E%3C/svg%3E") repeat;
+  pointer-events: none;
+}
+.restaurant-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+  position: relative;
+  z-index: 1;
+}
+.restaurant-badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(4px);
+}
+.restaurant-hero h1 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.06;
+  max-width: 820px;
+  font-weight: 800;
+}
+.restaurant-hero h1 em {
+  font-style: normal;
+  position: relative;
+}
+.restaurant-hero h1 em::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  margin-top: 2px;
+}
+.restaurant-hero > div > p {
+  max-width: 580px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Hero Stats */
+.hero-stats-row {
+  display: flex;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  width: fit-content;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.hero-stat {
+  padding: 16px 28px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat-num {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.hero-stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 3px;
+  white-space: nowrap;
+}
+
+/* ── CARDS DE FUNCIONALIDADES ── */
+.restaurant-features {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 52px 5% 0;
+}
+.restaurant-features-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.restaurant-features-header .label-pill {
+  display: inline-block;
+  background: #f9ecec;
+  color: #8e0b11;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.restaurant-features-header h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: #231f20;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.restaurant-features-header p {
+  color: #6b6b6b;
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 0.97rem;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.restaurant-card {
+  background: #fff;
+  border: 1px solid #efe2df;
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 8px 24px rgba(18, 18, 18, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(200, 18, 26, 0.1);
+  border-color: #f1c9c2;
+}
+.restaurant-card.highlight {
+  background: linear-gradient(145deg, #fff4f2, #ffffff);
+  border-color: #f1c9c2;
+}
+.card-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #c8121a, #8e0b11);
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(200, 18, 26, 0.25);
+}
+.restaurant-card h3 {
+  font-family: "Sora", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #231f20;
+}
+.restaurant-card p {
+  color: #6b6b6b;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.card-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card-features li {
+  font-size: 0.82rem;
+  color: #5a5a5a;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.card-features li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #c8121a;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── POR QUE A EWNET ── */
+.restaurant-why {
+  background: #fff8f7;
+  border-top: 1px solid #f2e4e1;
+  border-bottom: 1px solid #f2e4e1;
+  padding: 60px 5%;
+  margin-top: 52px;
+}
+.restaurant-why-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.why-text .label-pill {
+  display: inline-block;
+  background: #f9ecec;
+  color: #8e0b11;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.why-text h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: #231f20;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.why-text > p {
+  color: #6b6b6b;
+  font-size: 0.97rem;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+.why-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.why-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.93rem;
+  color: #3a3a3a;
+  line-height: 1.6;
+}
+.check-dot {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c8121a, #8e0b11);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.why-image-wrap {
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #f9ecec, #fff0ee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #efe2df;
+}
+.why-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.why-image-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.why-image-badge .badge-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #c8121a, #8e0b11);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+}
+.why-image-badge strong {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #231f20;
+}
+.why-image-badge span { font-size: 0.75rem; color: #888; }
+
+/* ── COMO FUNCIONA ── */
+.restaurant-steps {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 5%;
+}
+.restaurant-steps-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.restaurant-steps-header .label-pill {
+  display: inline-block;
+  background: #f9ecec;
+  color: #8e0b11;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.restaurant-steps-header h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: #231f20;
+}
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  position: relative;
+}
+.steps-row::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, #f1c9c2, #c8121a, #f1c9c2);
+  z-index: 0;
+}
+.step-card {
+  background: #fff;
+  border: 1px solid #efe2df;
+  border-radius: 18px;
+  padding: 22px 18px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.step-card:hover {
+  border-color: #c8121a;
+  box-shadow: 0 12px 28px rgba(200, 18, 26, 0.1);
+}
+.step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c8121a, #8e0b11);
+  color: #fff;
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  box-shadow: 0 4px 12px rgba(200, 18, 26, 0.3);
+}
+.step-card h4 {
+  font-family: "Sora", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #231f20;
+  margin-bottom: 6px;
+}
+.step-card p { font-size: 0.83rem; color: #6b6b6b; line-height: 1.6; }
+
+/* ── NÚMEROS / PROVA SOCIAL ── */
+.restaurant-social {
+  background: linear-gradient(135deg, #c8121a 0%, #8e0b11 100%);
+  padding: 52px 5%;
+}
+.restaurant-social-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.restaurant-social h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 32px;
+}
+.social-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.social-stat {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 28px 20px;
+  text-align: center;
+}
+.social-stat strong {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.social-stat span { font-size: 0.85rem; color: rgba(255, 255, 255, 0.72); }
+
+/* ── SEÇÃO COZINHA CONECTADA ── */
+.rest-features-section { padding: 0 0 60px; }
+.rest-steps-section    { padding: 0; }
+
+.kitchen-section {
+  padding: 60px 5%;
+}
+.kitchen-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.kitchen-image {
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+}
+.kitchen-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+.kitchen-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(200, 18, 26, 0.9);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+}
+.kitchen-text .label-pill {
+  display: inline-block;
+  background: #f9ecec;
+  color: #8e0b11;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.kitchen-text h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #231f20;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.kitchen-text p {
+  color: #6b6b6b;
+  font-size: 0.97rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+.kitchen-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.kitchen-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.93rem;
+  color: #3a3a3a;
+  line-height: 1.6;
+}
+
+/* ── CTA FINAL ── */
+.restaurant-cta {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 52px 5% 72px;
+}
+.restaurant-cta-box {
+  background: linear-gradient(135deg, #fff4f4, #fff);
+  border: 1px solid #efdfdf;
+  border-radius: 28px;
+  padding: 40px 44px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  box-shadow: 0 20px 50px rgba(200, 18, 26, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.restaurant-cta-box::before {
+  content: "🍽️";
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  font-size: 8rem;
+  opacity: 0.06;
+  line-height: 1;
+  pointer-events: none;
+}
+.restaurant-cta-box h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  color: #231f20;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+.restaurant-cta-box p {
+  color: #6b6b6b;
+  max-width: 560px;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}

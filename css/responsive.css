@@ -1,0 +1,139 @@
+/* =============================================================
+   responsive.css — Media Queries e Breakpoints
+   ============================================================= */
+
+/* ── BOTÃO EXPERIMENTE ── */
+@media (max-width: 600px) {
+  .btn-experimente {
+    top: 86px;
+    right: 16px;
+    font-size: 0.8rem;
+    padding: 10px 15px;
+  }
+}
+
+/* ── DESKTOP: hover dropdown ── */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu { display: block; }
+  .dropdown:hover .arrow { transform: rotate(180deg); }
+}
+
+/* ── TABLET / MOBILE NAV ── */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 6px 0;
+    margin-top: 4px;
+    background: var(--white);
+  }
+  .dropdown.active .dropdown-menu { display: block; }
+  .dropdown.active .arrow { transform: rotate(180deg); }
+}
+
+/* ── LARGE TABLET (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .dep-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── TABLET (≤ 900px) ── */
+@media (max-width: 1024px) {
+  /* Nav */
+  .nav-links,
+  .nav-cta  { display: none; }
+  .hamburger { display: flex; }
+
+  nav.menu-open {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 12px 14px 14px;
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    z-index: 120;
+  }
+  nav.menu-open .hamburger    { margin-left: auto; align-self: center; }
+  nav.menu-open .nav-logo     { z-index: 2; }
+  nav.menu-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.35rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-200);
+    background: var(--white);
+  }
+  nav.menu-open .nav-links a  { display: block; padding: 0.35rem 0; }
+  nav.menu-open .nav-cta      { display: inline-flex; margin-left: auto; margin-top: 0.25rem; }
+
+  /* Layouts em grid → coluna única */
+  .hero-card,
+  .sistemas-grid,
+  .sobre-inner    { grid-template-columns: 1fr; }
+  .hero-img       { min-height: 240px; }
+
+  /* Módulos varejo */
+  .func-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .func-inner.reverse > *:first-child,
+  .func-inner.reverse > *:last-child { order: initial; }
+  .screen-wrap         { max-width: 100%; }
+  .screen-wrap img     { border-radius: 14px; }
+
+  /* Restaurante */
+  .restaurant-grid   { grid-template-columns: 1fr 1fr; }
+  .restaurant-why-inner { grid-template-columns: 1fr; gap: 36px; }
+  .steps-row         { grid-template-columns: 1fr 1fr; }
+  .steps-row::before { display: none; }
+  .social-stats-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Footer e depoimentos */
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .dep-grid    { grid-template-columns: repeat(2, 1fr); }
+  .dep-stats-row { max-width: 100%; }
+}
+
+/* ── MOBILE (≤ 680px) ── */
+@media (max-width: 680px) {
+  .restaurant-grid    { grid-template-columns: 1fr; }
+  .restaurant-cta-box { padding: 28px 24px; align-items: flex-start; }
+  .steps-row          { grid-template-columns: 1fr 1fr; }
+  .hero-stats-row     { flex-wrap: wrap; }
+  .hero-stat          { flex: 1 1 40%; }
+  .social-stats-grid  { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── MOBILE (≤ 640px) ── */
+@media (max-width: 640px) {
+  .dep-grid      { grid-template-columns: 1fr; }
+  .dep-stats-row { flex-direction: column; border-radius: 12px; }
+  .dep-stat-divider { width: 80%; height: 1px; }
+}
+
+/* ── MOBILE (≤ 600px) ── */
+@media (max-width: 600px) {
+  section         { padding: 56px 5%; }
+  .footer-grid    { grid-template-columns: 1fr; }
+  .seg-grid       { grid-template-columns: 1fr 1fr; }
+  .sobre-nums     { grid-template-columns: 1fr 1fr; }
+  .hero-text      { padding: 32px 24px; }
+  .hero-stats     { gap: 1.2rem; }
+  .suporte-banner { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+}
+
+/* ── MOBILE XS (≤ 420px) ── */
+@media (max-width: 420px) {
+  .steps-row         { grid-template-columns: 1fr; }
+  .social-stats-grid { grid-template-columns: 1fr 1fr; }
+}

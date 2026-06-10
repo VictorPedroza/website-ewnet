@@ -3,34 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EwNet Sistemas — Gestão para Lojas e Restaurantes</title>
+    <title>EwNet Sistemas</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/sections.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+
     <link
       rel="shortcut icon"
-      href="assets/icons/logo.ico"
+      href="./assets/icons/logo.ico"
       type="image/x-icon"
     />
   </head>
   <body>
-    <!-- ======================================================
-       NAV
-  ====================================================== -->
+    <!-- Botão Experimente Grátis -->
+    <a
+      href="https://www.velosistema.com.br/experimente-gratis/ewnet"
+      class="btn-experimente"
+      target="_blank"
+      aria-label="Experimente grátis"
+    >
+      🚀 Experimente Grátis
+    </a>
+
+    <!-- Header/Navbar -->
     <nav>
-      <a href="#" class="nav-logo">
+      <a href="../index.html" class="nav-logo">
         <img
-          src="assets/images/logo/NewLogoColorido.png"
+          src="../assets/images/logo/NewLogoColorido.png"
           alt="Logo EwNet"
           onerror="this.style.display = 'none'"
         />
       </a>
       <ul class="nav-links">
         <li><a href="#vantagens">Vantagens</a></li>
-        <li><a href="#segmentos">Segmentos</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li class="dropdown">
+          <a href="#segmentos" class="dropdown-toggle"
+            >Segmentos <span class="arrow">▼</span></a
+          >
+          <ul class="dropdown-menu">
+            <li><a href="./pages/varejo.html">Varejo</a></li>
+            <li><a href="./pages/restaurante.html">Restaurante</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#depoimentos">Depoimentos</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
@@ -40,9 +60,7 @@
       </button>
     </nav>
 
-    <!-- ======================================================
-       HERO
-  ====================================================== -->
+    <!-- Hero Inicial -->
     <div class="hero-section">
       <div class="hero-card">
         <div class="hero-text">
@@ -82,9 +100,7 @@
       </div>
     </div>
 
-    <!-- ======================================================
-       SISTEMAS
-  ====================================================== -->
+    <!-- Sessão de Principais Sistemas -->
     <section class="sistemas-section" id="sistemas">
       <div class="section-inner">
         <span class="section-label">Nossos Sistemas</span>
@@ -134,11 +150,10 @@
                   colaboradores em tempo real.
                 </p>
               </div>
-              <a href="#contato" class="btn-primary">Quero conhecer</a>
+              <a href="./pages/varejo.html" class="btn-primary">Quero conhecer</a>
             </div>
           </div>
-
-          <!-- Restaurantes -->
+          <!-- Restaurante -->
           <div class="sistema-bloco">
             <div class="sistema-header">
               <span class="sys-icon">🍽️</span>
@@ -175,16 +190,16 @@
                   celular, de qualquer lugar.
                 </p>
               </div>
-              <a href="#contato" class="btn-primary">Quero conhecer</a>
+              <a href="pages/restaurante.html" class="btn-primary"
+                >Quero conhecer</a
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======================================================
-       VANTAGENS
-  ====================================================== -->
+    <!-- Vantagens -->
     <section id="vantagens">
       <div class="section-inner">
         <span class="section-label">Por que a EwNet?</span>
@@ -247,9 +262,7 @@
       </div>
     </section>
 
-    <!-- ======================================================
-       SEGMENTOS
-  ====================================================== -->
+    <!-- Segmentos -->
     <section id="segmentos" class="segmentos-section">
       <div class="section-inner">
         <span class="section-label">Segmentos</span>
@@ -262,7 +275,8 @@
         </p>
         <div class="seg-grid">
           <div class="seg-card active">
-            <span class="seg-icon">🏪</span><span>Lojas e Varejo</span>
+            <span class="seg-icon" href="./pages/varejo.html">🏪</span
+            ><span>Lojas e Varejo</span>
           </div>
           <div class="seg-card">
             <span class="seg-icon">🍽️</span><span>Restaurantes</span>
@@ -290,9 +304,7 @@
       </div>
     </section>
 
-    <!-- ======================================================
-       DEPOIMENTOS
-  ====================================================== -->
+    <!-- Depoimentos -->
     <section id="depoimentos">
       <div class="section-inner">
         <span class="section-label">Depoimentos</span>
@@ -304,7 +316,7 @@
 
         <div class="dep-stats-row">
           <div class="dep-stat-item">
-            <strong class="dep-stat-num">+1.000</strong>
+            <strong class="dep-stat-num">+300</strong>
             <span class="dep-stat-lbl">Clientes ativos</span>
           </div>
           <div class="dep-stat-divider"></div>
@@ -467,9 +479,7 @@
       </div>
     </section>
 
-    <!-- ======================================================
-       SOBRE
-  ====================================================== -->
+    <!-- Sobre a Empresa -->
     <section id="sobre">
       <div class="section-inner">
         <div class="sobre-inner">
@@ -510,16 +520,14 @@
               <li>Varejo: Seg a Sex, 08h às 12h / 13h30 às 17h30</li>
               <li>Food Service: Seg a Sex, 10h às 22h</li>
               <li>Sábados e Domingos: Plantão disponível</li>
-              <li>(11) 9.1478-7453 | (11) 4458-3475</li>
+              <li>(11) 9.1478-7453</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======================================================
-       SUPORTE
-  ====================================================== -->
+    <!-- Link de Download - KhelpDesk -->
     <section class="suporte-section">
       <div class="suporte-banner">
         <div>
@@ -538,9 +546,7 @@
       </div>
     </section>
 
-    <!-- ======================================================
-       CONTATO
-  ====================================================== -->
+    <!-- Contato -->
     <section id="contato" class="contato-section">
       <div class="section-inner">
         <div class="contato-info">
@@ -579,9 +585,7 @@
       </div>
     </section>
 
-    <!-- ======================================================
-       FOOTER
-  ====================================================== -->
+    <!-- Rodapé -->
     <footer>
       <div class="footer-grid">
         <div>
@@ -604,17 +608,17 @@
         <div>
           <h4>Soluções</h4>
           <ul>
-            <li><a href="#">Sistema Velo</a></li>
-            <li><a href="#">Sistema STi3</a></li>
+            <li><a href="./pages/varejo.html">Sistema para Varejo</a></li>
+            <li>
+              <a href="pages/restaurante.html">Sistema para Restaurantes</a>
+            </li>
             <li><a href="#">Sistema Delivery</a></li>
             <li><a href="#">Certificados Digitais</a></li>
-            <li><a href="#">Suporte Técnico</a></li>
           </ul>
         </div>
         <div class="footer-contact">
           <h4>Contato</h4>
           <p><strong>(11) 9.1478-7453</strong></p>
-          <p>(11) 4458-3475 Fixo</p>
           <p>Rua Eldizia, 154<br />Vila Guarani — Santo André SP</p>
         </div>
       </div>
@@ -623,14 +627,17 @@
         <a href="#">Política de Privacidade</a>
       </div>
     </footer>
+
+    <!-- Link de WhatsApp -->
     <a
       href="https://wa.me/5511914787453"
       class="whatsapp-float"
       target="_blank"
       aria-label="Fale conosco no WhatsApp"
     >
-      <img src="./assets/images/logo/whatsapp.png" alt="">
+      <img src="./assets/images/logo/whatsapp.png" alt="" />
     </a>
-    <script src="js/main.js"></script>
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
