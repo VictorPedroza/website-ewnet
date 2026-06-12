@@ -600,13 +600,13 @@
     body { font-family: "Inter", sans-serif; background: #fffaf7; color: #2d2d2d; }
  
     /* ── LUCROS HERO-STRIP ── */
-    .pedizap-profits {
+    .sistema-delivery-profits {
       background: linear-gradient(135deg, #c8121a 0%, #8e0b11 100%);
       padding: 64px 5%;
       position: relative;
       overflow: hidden;
     }
-    .pedizap-profits::after {
+    .sistema-delivery-profits::after {
       content: "";
       position: absolute;
       right: -80px; top: -80px;
@@ -722,20 +722,20 @@
       margin: 0;
     }
  
-    /* ── PEDIZAP INTRO ── */
-    .pedizap-intro {
+    /* ── sistema-delivery INTRO ── */
+    .sistema-delivery-intro {
       max-width: 1100px;
       margin: 0 auto;
       padding: 72px 5% 0;
     }
-    .pedizap-intro-header {
+    .sistema-delivery-intro-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 52px;
       align-items: end;
       margin-bottom: 44px;
     }
-    .pedizap-intro-header .label-pill {
+    .sistema-delivery-intro-header .label-pill {
       display: inline-block;
       background: #f9ecec;
       color: #8e0b11;
@@ -747,18 +747,18 @@
       border-radius: 20px;
       margin-bottom: 12px;
     }
-    .pedizap-intro-header h2 {
+    .sistema-delivery-intro-header h2 {
       font-family: "Sora", sans-serif;
       font-size: clamp(1.6rem, 3vw, 2.3rem);
       font-weight: 800;
       color: #231f20;
       line-height: 1.15;
     }
-    .pedizap-intro-header h2 em {
+    .sistema-delivery-intro-header h2 em {
       font-style: normal;
       color: #c8121a;
     }
-    .pedizap-intro-header p {
+    .sistema-delivery-intro-header p {
       color: #6b6b6b;
       font-size: 0.97rem;
       line-height: 1.75;
@@ -802,7 +802,7 @@
     }
  
     /* ── CARDÁPIO DIGITAL SECTION ── */
-    .pedizap-cardapio {
+    .sistema-delivery-cardapio {
       background: #fff8f7;
       border-top: 1px solid #f2e4e1;
       border-bottom: 1px solid #f2e4e1;
@@ -904,13 +904,13 @@
       font-weight: 600;
     }
  
-    /* ── PEDIZAP CTA ── */
-    .pedizap-cta-wrap {
+    /* ── sistema-delivery CTA ── */
+    .sistema-delivery-cta-wrap {
       max-width: 1100px;
       margin: 0 auto;
       padding: 52px 5% 72px;
     }
-    .pedizap-cta-box {
+    .sistema-delivery-cta-box {
       background: linear-gradient(135deg, #c8121a 0%, #8e0b11 100%);
       border-radius: 28px;
       padding: 44px 48px;
@@ -923,7 +923,7 @@
       overflow: hidden;
       box-shadow: 0 24px 60px rgba(200,18,26,0.25);
     }
-    .pedizap-cta-box::before {
+    .sistema-delivery-cta-box::before {
       content: "";
       position: absolute;
       right: -60px; bottom: -60px;
@@ -932,7 +932,7 @@
       background: rgba(255,255,255,0.07);
       pointer-events: none;
     }
-    .pedizap-cta-box::after {
+    .sistema-delivery-cta-box::after {
       content: "🍔";
       position: absolute;
       right: 120px; bottom: -10px;
@@ -1028,8 +1028,8 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 780px) {
       .profits-inner,
-      .pedizap-intro-header,
+      .sistema-delivery-intro-header,
       .cardapio-steps { grid-template-columns: 1fr; }
-      .pedizap-cta-box { flex-direction: column; }
+      .sistema-delivery-cta-box { flex-direction: column; }
       .hero-stats-row { flex-wrap: wrap; }
     }
