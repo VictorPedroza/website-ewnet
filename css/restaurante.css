@@ -595,3 +595,441 @@
   flex-wrap: wrap;
   flex-shrink: 0;
 }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Inter", sans-serif; background: #fffaf7; color: #2d2d2d; }
+ 
+    /* ── LUCROS HERO-STRIP ── */
+    .pedizap-profits {
+      background: linear-gradient(135deg, #c8121a 0%, #8e0b11 100%);
+      padding: 64px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+    .pedizap-profits::after {
+      content: "";
+      position: absolute;
+      right: -80px; top: -80px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      pointer-events: none;
+    }
+    .profits-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: center;
+    }
+    .profits-text .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .profits-text h2 {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .profits-text h2 span {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border-radius: 8px;
+      padding: 0 8px;
+    }
+    .profits-text p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .profits-saving-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 16px;
+      padding: 14px 22px;
+      backdrop-filter: blur(6px);
+    }
+    .profits-saving-badge .amount {
+      font-family: "Sora", sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+    .profits-saving-badge .amount-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.72);
+      margin-top: 3px;
+    }
+    .profits-divider { width: 1px; height: 48px; background: rgba(255,255,255,0.25); }
+ 
+    /* Benefit cards on the right */
+    .profits-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .profit-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      backdrop-filter: blur(4px);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .profit-card:hover {
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(255,255,255,0.28);
+    }
+    .profit-card-icon {
+      width: 40px; height: 40px; min-width: 40px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .profit-card h4 {
+      font-family: "Sora", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .profit-card p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.55;
+      margin: 0;
+    }
+ 
+    /* ── PEDIZAP INTRO ── */
+    .pedizap-intro {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 5% 0;
+    }
+    .pedizap-intro-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: end;
+      margin-bottom: 44px;
+    }
+    .pedizap-intro-header .label-pill {
+      display: inline-block;
+      background: #f9ecec;
+      color: #8e0b11;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .pedizap-intro-header h2 {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      font-weight: 800;
+      color: #231f20;
+      line-height: 1.15;
+    }
+    .pedizap-intro-header h2 em {
+      font-style: normal;
+      color: #c8121a;
+    }
+    .pedizap-intro-header p {
+      color: #6b6b6b;
+      font-size: 0.97rem;
+      line-height: 1.75;
+      margin-top: 12px;
+    }
+    .intro-right-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .intro-badge-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #fff;
+      border: 1px solid #efe2df;
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: 0 4px 12px rgba(18,18,18,0.05);
+    }
+    .intro-badge-icon {
+      width: 36px; height: 36px; min-width: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #c8121a, #8e0b11);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .intro-badge-row strong {
+      display: block;
+      font-family: "Sora", sans-serif;
+      font-size: 0.87rem;
+      font-weight: 800;
+      color: #231f20;
+      margin-bottom: 2px;
+    }
+    .intro-badge-row span {
+      font-size: 0.8rem;
+      color: #7a7a7a;
+      line-height: 1.5;
+    }
+ 
+    /* ── CARDÁPIO DIGITAL SECTION ── */
+    .pedizap-cardapio {
+      background: #fff8f7;
+      border-top: 1px solid #f2e4e1;
+      border-bottom: 1px solid #f2e4e1;
+      padding: 68px 5%;
+      margin-top: 68px;
+    }
+    .cardapio-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .cardapio-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .cardapio-header .label-pill {
+      display: inline-block;
+      background: #f9ecec;
+      color: #8e0b11;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .cardapio-header h2 {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: #231f20;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .cardapio-header p {
+      color: #6b6b6b;
+      font-size: 0.97rem;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+ 
+    /* Feature steps (3 cols) */
+    .cardapio-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .cardapio-step {
+      background: #fff;
+      border: 1px solid #efe2df;
+      border-radius: 22px;
+      padding: 28px 24px;
+      position: relative;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .cardapio-step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(200,18,26,0.09);
+      border-color: #f1c9c2;
+    }
+    .step-num-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #c8121a, #8e0b11);
+      color: #fff;
+      font-family: "Sora", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 10px rgba(200,18,26,0.25);
+    }
+    .cardapio-step h3 {
+      font-family: "Sora", sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #231f20;
+      margin-bottom: 10px;
+    }
+    .cardapio-step p {
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+    .step-whatsapp-note {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      color: #166534;
+      font-weight: 600;
+    }
+ 
+    /* ── PEDIZAP CTA ── */
+    .pedizap-cta-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 52px 5% 72px;
+    }
+    .pedizap-cta-box {
+      background: linear-gradient(135deg, #c8121a 0%, #8e0b11 100%);
+      border-radius: 28px;
+      padding: 44px 48px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(200,18,26,0.25);
+    }
+    .pedizap-cta-box::before {
+      content: "";
+      position: absolute;
+      right: -60px; bottom: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      pointer-events: none;
+    }
+    .pedizap-cta-box::after {
+      content: "🍔";
+      position: absolute;
+      right: 120px; bottom: -10px;
+      font-size: 7rem;
+      opacity: 0.08;
+      pointer-events: none;
+      line-height: 1;
+    }
+    .cta-left .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .cta-left h2 {
+      font-family: "Sora", sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .cta-left p {
+      color: rgba(255,255,255,0.82);
+      font-size: 0.97rem;
+      line-height: 1.65;
+      max-width: 520px;
+    }
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+      align-items: flex-start;
+    }
+    .btn-primary-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #c8121a;
+      font-family: "Sora", sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 13px 24px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.15s, box-shadow 0.15s;
+      white-space: nowrap;
+    }
+    .btn-primary-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+    }
+    .btn-ghost-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: "Sora", sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 22px;
+      border-radius: 12px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .btn-ghost-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.65);
+    }
+    .trial-note {
+      font-size: 0.77rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 2px;
+      padding-left: 4px;
+    }
+ 
+    /* ── RESPONSIVE ── */
+    @media (max-width: 780px) {
+      .profits-inner,
+      .pedizap-intro-header,
+      .cardapio-steps { grid-template-columns: 1fr; }
+      .pedizap-cta-box { flex-direction: column; }
+      .hero-stats-row { flex-wrap: wrap; }
+    }
