@@ -1,0 +1,477 @@
+/* =============================================================
+   delivery.css — Estilos exclusivos da página de Delivery
+   ============================================================= */
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* ── SECTION HEADER GENÉRICO ── */
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header .label-pill {
+  display: inline-block;
+  background: #f9ecec;
+  color: #8e0b11;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: #231f20;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #6b6b6b;
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 0.97rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   COMO FUNCIONA — WORKFLOW
+   ═══════════════════════════════════════════════════════════ */
+
+.delivery-how-it-works {
+  padding: 60px 5%;
+  background: #fff8f7;
+  border-top: 1px solid #f2e4e1;
+  border-bottom: 1px solid #f2e4e1;
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
+.workflow-arrow {
+  display: none;
+  text-align: center;
+  color: #c8121a;
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.workflow-step {
+  background: #fff;
+  border: 1px solid #efe2df;
+  border-radius: 18px;
+  padding: 28px 22px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+.workflow-step:hover {
+  transform: translateY(-4px);
+  border-color: #f1c9c2;
+  box-shadow: 0 16px 32px rgba(200, 18, 26, 0.12);
+}
+
+.step-number {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c8121a, #8e0b11);
+  color: #fff;
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 6px 16px rgba(200, 18, 26, 0.3);
+}
+
+.step-content h3 {
+  font-family: "Sora", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #231f20;
+  margin-bottom: 10px;
+}
+
+.step-content p {
+  font-size: 0.9rem;
+  color: #6b6b6b;
+  line-height: 1.7;
+}
+
+/* Adicionar setas visuais entre os passos */
+.workflow-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: #c8121a;
+  font-weight: bold;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   POR QUE ESCOLHER — BENEFITS
+   ═══════════════════════════════════════════════════════════ */
+
+.delivery-benefits {
+  padding: 60px 5%;
+  background: #fff;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefits-content {
+  padding-top: 0;
+}
+
+.benefits-content .label-pill {
+  display: inline-block;
+  background: #f9ecec;
+  color: #8e0b11;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.benefits-content h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #231f20;
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.benefit-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fef1f0, #f9ecec);
+  border: 2px solid #f1c9c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.benefit-item h4 {
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #231f20;
+  margin-bottom: 4px;
+}
+
+.benefit-item p {
+  font-size: 0.9rem;
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+
+.benefits-visual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.benefit-box {
+  background: linear-gradient(135deg, #c8121a 0%, #8e0b11 100%);
+  border-radius: 18px;
+  padding: 32px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(200, 18, 26, 0.2);
+  transition: transform 0.3s;
+}
+
+.benefit-box:hover {
+  transform: translateY(-4px);
+}
+
+.benefit-highlight {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.benefit-number {
+  font-family: "Sora", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FEATURES — BLOCOS ALTERNADOS
+   ═══════════════════════════════════════════════════════════ */
+
+.delivery-features {
+  padding: 60px 5%;
+  background: #fff;
+}
+
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-block:last-child {
+  margin-bottom: 0;
+}
+
+.feature-block-right {
+  direction: rtl;
+}
+
+.feature-block-right > * {
+  direction: ltr;
+}
+
+.feature-text h3 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  color: #231f20;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.feature-text p {
+  color: #6b6b6b;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-list li {
+  font-size: 0.92rem;
+  color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.feature-list li::before {
+  content: "✓";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #c8121a, #8e0b11);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.feature-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-box {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #f9ecec 0%, #fff4f2 100%);
+  border: 2px solid #f1c9c2;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #8e0b11;
+  font-family: "Sora", sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-block:hover .placeholder-box {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(200, 18, 26, 0.15);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVO
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .workflow-steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .workflow-step::after {
+    display: none;
+  }
+
+  .workflow-step::before {
+    content: "↓";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    color: #c8121a;
+  }
+
+  .workflow-step:last-child::before {
+    display: none;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .feature-block {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+
+  .feature-block-right {
+    direction: ltr;
+  }
+
+  .placeholder-box {
+    min-height: 280px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workflow-steps {
+    gap: 40px;
+  }
+
+  .workflow-step {
+    padding: 20px 16px;
+  }
+
+  .step-number {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .step-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .step-content p {
+    font-size: 0.82rem;
+  }
+
+  .benefits-list {
+    gap: 18px;
+  }
+
+  .benefit-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 1.3rem;
+  }
+
+  .benefit-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .benefit-item p {
+    font-size: 0.8rem;
+  }
+
+  .benefit-box {
+    padding: 24px;
+  }
+
+  .benefit-number {
+    font-size: 2.2rem;
+  }
+
+  .feature-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature-text p {
+    font-size: 0.88rem;
+  }
+
+  .feature-list li {
+    font-size: 0.8rem;
+  }
+}
