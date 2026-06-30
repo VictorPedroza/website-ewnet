@@ -354,6 +354,14 @@
   color: #8e0b11;
   font-family: "Sora", sans-serif;
   transition: transform 0.3s, box-shadow 0.3s;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.placeholder-box svg {
+  width: 100%;
+  height: 100%;
+  max-width: 280px;
 }
 
 .feature-block:hover .placeholder-box {
