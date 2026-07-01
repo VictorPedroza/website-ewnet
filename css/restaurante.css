@@ -229,10 +229,10 @@
   margin-top: 52px;
 }
 .restaurant-why-inner {
-  max-width: 1100px;
+  max-width: 760px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: center;
 }
@@ -290,54 +290,6 @@
   font-weight: 700;
   margin-top: 1px;
 }
-.why-image-wrap {
-  border-radius: 22px;
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 4/3;
-  background: linear-gradient(135deg, #f9ecec, #fff0ee);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #efe2df;
-}
-.why-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.why-image-badge {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-.why-image-badge .badge-icon {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, #c8121a, #8e0b11);
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1rem;
-}
-.why-image-badge strong {
-  display: block;
-  font-family: "Sora", sans-serif;
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: #231f20;
-}
-.why-image-badge span { font-size: 0.75rem; color: #888; }
-
 /* ── COMO FUNCIONA ── */
 .restaurant-steps {
   max-width: 1100px;
@@ -469,41 +421,12 @@
   padding: 60px 5%;
 }
 .kitchen-inner {
-  max-width: 1100px;
+  max-width: 760px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: center;
-}
-.kitchen-image {
-  border-radius: 22px;
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 4/3;
-  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #333;
-}
-.kitchen-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.85;
-}
-.kitchen-badge {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: rgba(200, 18, 26, 0.9);
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 20px;
-  letter-spacing: 0.06em;
 }
 .kitchen-text .label-pill {
   display: inline-block;
